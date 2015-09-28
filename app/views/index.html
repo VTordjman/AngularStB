@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="NoteWrangler">
   <head>
     <meta charset="utf-8">
     <title>Note Wrangler</title>
@@ -8,6 +8,9 @@
   </head>
   <body>
     <h1>Hello world !</h1>
+    <div ng-view>
+
+    </div>
   </body>
 
     <!--vendor-->
@@ -17,7 +20,17 @@
   <script src="..\assets\javascript\vendor\angular-resource.js"></script>
 
   <!-- App -->
+  <script src="..\assets\javascript\app.js"></script>
+  <script src="..\assets\javascript\routes.js"></script>
+
   <!-- Directives -->
+
   <!-- Controllers -->
+  <script src="..\assets\javascript\controllers\noteIndexController.js"></script>
+  <script src="..\assets\javascript\controllers\noteCreateController.js"></script>
+  <script src="..\assets\javascript\controllers\noteShowController.js"></script>
+  <script src="..\assets\javascript\controllers\noteEditController.js"></script>
+
   <!-- Services -->
+
 </html>
