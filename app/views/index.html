@@ -15,10 +15,7 @@
               <a href="#/">Note Wrangler</a>
           </div>
         </div>
-        <ul class="nav navbar-nav">
-          <li><a href="#/notes">Notes</a></li>
-          <li><a href="#/users">Users</a></li>
-        </ul>
+        <nw-page-nav></nw-page-nav>
       </div>
     </nav>
     <div class="container" ng-view>
@@ -36,6 +33,7 @@
   <script src="..\assets\javascript\routes.js"></script>
 
   <!-- Directives -->
+  <script src="..\assets\javascript\directives\nwPageNav.js"></script>
 
   <!-- Controllers -->
   <script src="..\assets\javascript\controllers\noteIndexController.js"></script>
