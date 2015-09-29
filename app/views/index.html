@@ -3,11 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Note Wrangler</title>
+    <link rel="icon" href="assets\img\INVECTORY_favicon.ico">
     <link rel="stylesheet" href="..\assets\styles\bootstrap.css"></link>
     <link rel="stylesheet" href="..\assets\styles\bootstrap-theme.css"></link>
   </head>
   <body>
-    <h1><a href="#/">Note Wrangler</a></h1>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+              <a href="#/">Note Wrangler</a>
+          </div>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#/notes">Notes</a></li>
+          <li><a href="#/users">Users</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container" ng-view>
     </div>
   </body>
@@ -29,8 +42,11 @@
   <script src="..\assets\javascript\controllers\noteCreateController.js"></script>
   <script src="..\assets\javascript\controllers\noteShowController.js"></script>
   <script src="..\assets\javascript\controllers\noteEditController.js"></script>
+  <script src="..\assets\javascript\controllers\userIndexController.js"></script>
+  <script src="..\assets\javascript\controllers\userShowController.js"></script>
 
   <!-- Services -->
   <script src="..\assets\javascript\services\note.js"></script>
+  <script src="..\assets\javascript\services\user.js"></script>
 
 </html>
