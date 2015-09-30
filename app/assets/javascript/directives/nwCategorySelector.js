@@ -7,18 +7,22 @@ angular.module('NoteWrangler').directive("nwCategorySelector", function(Category
     link: function(scope, element, attrs, ngModelCtrl){
       var activeCategory = {};
       scope.categories = Category.query();
+      var reset=false;
 
       scope.isActive = function(category){
         return activeCategory && activeCategory.id === category.id;
       }
 
       scope.toggleCategory = function(category){
-        if(category === activeCategory) {
-          activeCategory = {};
-        } else {
-          activeCategory = category;
+        if (typeof category === 'undefined') {
+          activeCategory = scope.category;
+        }else {
+          if(category === activeCategory) {
+            activeCategory = {};
+          } else {
+            activeCategory = category;
+          }
         }
-
         ngModelCtrl.$setViewValue(activeCategory);
       }
 
